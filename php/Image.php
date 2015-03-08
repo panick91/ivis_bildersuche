@@ -28,7 +28,8 @@ class Image implements JsonSerializable{
         return array(
             'sik_invnr' => $this->SIK_INVNR,
             'titel' => $this->TITEL,
-            'jahr' => $this->JAHR
+            'jahr' => $this->JAHR,
+            'filename' => $this->FILENAME
         );
     }
 }

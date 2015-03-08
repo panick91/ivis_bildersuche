@@ -3,3 +3,8 @@ body{
     margin-left: auto;
     margin-right: auto;
 }
+
+.thumbnail{
+    height:40px;
+    max-width: 30px;
+}

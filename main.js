@@ -12,7 +12,8 @@ $(function(){
         $(data).each(function(key){
             items.add({
                 id: key,
-                content: data[key]['titel'],
+                header: data[key]['titel'],
+                path:data[key]['filename'] + '.jpg',
                 start: new Date(data[key]['jahr'])
             });
         });
@@ -22,7 +23,8 @@ $(function(){
             start:1975,
             end:1981,
             template: function (item) {
-                return '<h1>' + item.header + '</h1><p>' + item.description + '</p>';
+                var path = "Datensatz Eva Aeppli SIK-ISEA/" + item.path;
+                return '<span>' + item.header + '</span><img class="thumbnail" src="' + path + '"></img>';
             },
             maxHeight: 700,
             minHeight: 700,
