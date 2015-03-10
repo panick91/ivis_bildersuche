@@ -3,11 +3,13 @@
  */
 var timeline;
 var graph2d;
+var data;
 
 $(function () {
     // DOM element where the Timeline will be attached
 
     $.get('php/getImages.php', function (data) {
+        this.data = data;
         createDetailView(data);
         createTimeLine(data);
     });
@@ -19,12 +21,14 @@ function createDetailView(data) {
 
     var items = new vis.DataSet();
     $(data).each(function (key) {
-        items.add({
-            id: key,
-            header: data[key]['titel'],
-            path: data[key]['filename'] + '.jpg',
-            start: new Date(data[key]['jahr'])
-        });
+        if (data[key]['jahr'] != "") {
+            items.add({
+                id: key,
+                header: data[key]['titel'],
+                path: data[key]['filename'] + '.jpg',
+                start: new Date(data[key]['jahr'])
+            });
+        }
     });
     // Configuration for the Timeline
     var options = {
@@ -32,10 +36,10 @@ function createDetailView(data) {
         end: '1981-01-01',
         template: function (item) {
             var path = "Datensatz Eva Aeppli SIK-ISEA/" + item.path;
-            return '<span>' + item.header + '</span><img class="thumbnail" src="' + path + '"></img>';
+            return '<img class="thumbnail" src="' + path + '"></img>';
         },
-        maxHeight: 700,
-        minHeight: 700,
+        maxHeight: 650,
+        minHeight: 650,
         zoomable: true,
         zoomMax: 190000000000,
         zoomMin: 190000000000
