@@ -42,7 +42,9 @@ function createDetailView(data) {
         minHeight: 650,
         zoomable: true,
         zoomMax: 190000000000,
-        zoomMin: 190000000000
+        zoomMin: 190000000000,
+        showMajorLabels: false,
+        showMinorLabels: false
     };
     // Create a Timeline
     timeline = new vis.Timeline(container, items, options);
