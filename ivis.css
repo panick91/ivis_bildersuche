@@ -7,3 +7,19 @@
 .thumbnail{
     height:100px;
 }
+
+div.left-side {
+    float: left;
+    width: 20%;
+    margin: 0 10px 0 0;
+}
+
+div.right-side {
+    float: right;
+    position: relative;
+    width: 78%;
+}
+
+div.happening-panel {
+    margin-top: 470px;
+}

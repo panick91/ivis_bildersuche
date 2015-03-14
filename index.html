@@ -8,20 +8,77 @@
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-2.1.3.js"></script>
     <script src="ext/visjs/vis.js"></script>
+    <script src="ext/bootstrap.min.js"></script>
     <script src="main.js"></script>
 </head>
 <body>
 <nav class="navbar navbar-inverse">
-    <div class="container-fluid">
+    <div class="container container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <a class="navbar-brand" href="#">Bildergallerie Eva Aeppli</a>
+            <a class="navbar-brand" href="#">Gallerie Eva Aeppli</a>
         </div>
-    </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.container-fluid -->
 </nav>
 <div class="container">
-<div id="visualization"></div>
-<div id="timeline"></div>
+    <div class="left-side">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title">Typ</h3>
+            </div>
+            <div class="panel-body">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="test">
+                        Gemälde
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="test">
+                        Skizze
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="test">
+                        Zeichnung
+                    </label>
+                </div>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="test">
+                        Skulptur
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default happening-panel">
+            <div class="panel-heading">
+                <h3 class="panel-title">Ereignis</h3>
+            </div>
+            <div class="panel-body">
+                <div class="dropdown">
+                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1"
+                            data-toggle="dropdown"
+                            aria-expanded="true">
+                        Anzahl Werke
+                        <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Wohnort</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Lebenspartner</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Zusammenarbeit</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side">
+        <div id="visualization"></div>
+        <div id="timeline"></div>
+    </div>
 </div>
 </body>
 </html>

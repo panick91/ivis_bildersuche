@@ -106,7 +106,7 @@ function createTimeLine(data) {
         dataAxis:{
             visible:false
         },
-        defaultGroup: 'Number of Images',
+        defaultGroup: 'Anzahl Werke',
         legend:true
     };
     graph2d = new vis.Graph2d(container, dataset, options);
